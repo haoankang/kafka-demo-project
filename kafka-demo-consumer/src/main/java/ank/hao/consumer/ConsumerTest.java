@@ -16,7 +16,7 @@ public class ConsumerTest {
         String groupId = "first-group";
 
         Properties properties = new Properties();
-        properties.put(BOOTSTRAP_SERVERS_CONFIG, "10.100.1.130:9092");
+        properties.put(BOOTSTRAP_SERVERS_CONFIG, "devhost30:9092");
         properties.put(GROUP_ID_CONFIG, groupId);
         properties.put(ENABLE_AUTO_COMMIT_CONFIG, "true");
         properties.put(AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
@@ -31,6 +31,7 @@ public class ConsumerTest {
                 ConsumerRecords<String,String> records = consumer.poll(Duration.ofSeconds(1));
                 for(ConsumerRecord<String,String> record:records){
                     System.out.printf("offset=%d, key=%s, value=%s%n", record.offset(), record.key(), record.value());
+                    System.out.println();
                 }
             }
         } finally {
