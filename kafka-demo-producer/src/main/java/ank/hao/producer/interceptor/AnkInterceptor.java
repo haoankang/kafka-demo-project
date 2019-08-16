@@ -1,7 +1,5 @@
 package ank.hao.producer.interceptor;
 
-import com.fasterxml.jackson.databind.util.BeanUtil;
-import org.apache.commons.beanutils.BeanUtils;
 import org.apache.kafka.clients.producer.ProducerInterceptor;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;

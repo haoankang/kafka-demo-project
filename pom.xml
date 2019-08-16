@@ -11,6 +11,7 @@
     <modules>
         <module>kafka-demo-consumer</module>
         <module>kafka-demo-producer</module>
+        <module>zookeeper-demo</module>
     </modules>
 
     <properties>
